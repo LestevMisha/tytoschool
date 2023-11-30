@@ -197,7 +197,7 @@ ul.ul_custom {
 
 .header .b-row.show {
     display: flex !important;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     flex-direction: column;
     top: 50%;
@@ -256,7 +256,7 @@ ul.ul_custom {
     }
 
     .b-img.b-img_v1 {
-        width: 25em;
+        width: 25em !important;
     }
 
     .b-section-1 {
@@ -268,7 +268,7 @@ ul.ul_custom {
         justify-content: space-between;
     }
 
-    .b-text.b-text_center {
+    .b-section.b-section_btm .b-text.b-text_center {
         margin: 0 !important;
     }
 }
@@ -316,7 +316,7 @@ ul.ul_custom {
     }
 
     .b-img.b-img_v1 {
-        width: 28em;
+        width: 28em !important;
     }
 
     .b-section-1 {
