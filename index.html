@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/test.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <script defer src="./js/app.js"></script>
+    <script defer src="./js/dropdown.js"></script>
 </head>
 
 <body>
     <div class="header" id="header">
         <div class="b-row b-row_spacebtw">
             <div class="b-row b-row_fit">
-                <img class="b-img" src="./images/logo.png" alt="logo">
-                <a class="b-text b-text_bold b-text_1.5em" href="./index.html">TYTOSCHOOL</a>
+                <img class="b-img b-img_logo" src="./images/logo.png" alt="logo">
+                <a class="b-text b-text_bold b-text_1.5em b-text_mgl1em" href="./index.html">TYTOSCHOOL</a>
             </div>
-            <img src="./images/menu.svg" alt="menu" class="menu">
+            <!-- <img src="./images/menu.svg" alt="menu" class="menu">
             <div class="b-row b-row_spaceeven" id="items">
                 <img id="cancel" src="./images/times-circle.svg" alt="cancel">
                 <a class="b-text b-text_bold" href="./english.html">Английский</a>
                 <a class="b-text b-text_bold" href="./math.html">Математика</a>
                 <a class="b-text b-text_bold" href="./biology.html">Биология</a>
                 <a class="b-text b-text_bold" href="./about.html">О Нас</a>
-            </div>
+            </div> -->
         </div>
     </div>
     <section class="b-section b-section-1">
@@ -31,16 +34,38 @@
             <div class="b-text b-text_v1" style="margin-top: 1em;">Ивестиции в знания</div>
             <div class="b-text b-text_v1">всегда приносят</div>
             <div class="b-text b-text_v1">небольшие проценты</div>
-            <button class="b-btn" style="margin-left: 2em">
-                Записаться на занятие
-            </button>
+            <!-- settlements-input -->
+            <form class="block form-js">
+                <div id="1-setinput-js" style="position: relative;">
+                    <div style="position: relative;">
+                        <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg">
+                        <input type="text" class="input-dropdown" name="user_subject" maxlength="256"
+                            placeholder="Записаться на занятие" required>
+                    </div>
+                    <div class="dropdown">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <input value="none" name="user_type" type="hidden">
+                <input class="b-input b-input_mgt1" name="user_email" placeholder="E-mail" type="text">
+                <button type="submit" class="b-btnv1 submit-js">Отправить форму</button>
+            </form>
+            <!-- settlements-input END -->
         </div>
         <img class="b-img b-img_v1" src="./images/ui-man.svg" alt="ui-person">
     </section>
 
     <section class="b-section b-section-2">
-        <div class="b-column" id="choices" style="padding: 2em; padding-top: 8em;">
-            <div class="b-column b-column_center b-column_custom">
+        <div style="position: relative; width: fit-content;">
+            <div class="b-text b-text_z1 b-text_fit b-texttit">Выбери направление!</div>
+            <div class="square">
+                <div class="square" style="background-color: #5bafe3;"></div>
+            </div>
+        </div>
+        <div class="b-column" id="choices" style="padding: 2em; padding-top: 4em;">
+
+            <div class="b-column b-column_custom">
                 <div class="b-text b-text_bback b-text_bback_v1">Индивидуальные занятия</div>
                 <ul class="ul_custom">
                     <li>Индивидуальный подход</li>
@@ -49,9 +74,9 @@
                     <li>Возможнось выбора темы</li>
                     <li>Гибкий график</li>
                 </ul>
-                <div class="b-text b-text_bback">2000 ₽ 60 мин</div>
+                <button class="b-btnv1 button-modjs">2000 ₽ 60 мин</button>
             </div>
-            <div class="b-column b-column_center b-column_custom" style="margin-top: 2em;">
+            <div class="b-column b-column_custom" style="margin-top: 2em;">
                 <div class="b-text b-text_bback b-text_bback_v1">Групповые занятия</div>
                 <ul class="ul_custom">
                     <li>Работа в группе</li>
@@ -60,17 +85,14 @@
                     <li>Новые знакомства</li>
                     <li>Скидка если приведешь друга</li>
                 </ul>
-                <div class="b-text b-text_bback">1000 ₽ 60 мин</div>
+                <button class="b-btnv1 button-modjs">1000 ₽ 60 мин</button>
             </div>
         </div>
         <img class="b-img b-img_v2" src="./images/ui-boys.png" alt="ui-person">
     </section>
 
     <section class="b-section b-section_btm">
-        <div class="b-text b-text_center" style="margin-bottom: 1em">
-            Хочу стать преподавателем<br />Записаться на пробное занятие<br />Подать заявку на
-        </div>
-        <div class="b-row b-row_fit" style="justify-content: flex-end;">
+        <div class="b-row b-row_v1">
             <a target="_blank" href="https://instagram.com/tytoschool?igshid=MTk0NTkyODZkYg==">
                 <img class="img-social" src="./images/in.webp" alt="instagram" class="b-img">
             </a>
@@ -82,11 +104,98 @@
                 <img class="img-social" src="./images/vk.png" alt="vk" class="b-img">
             </a>
 
+            <a target="_blank" href="https://www.youtube.com/@tytoschool">
+                <img class="img-social" src="./images/youtube.webp" alt="yt" class="b-img">
+            </a>
+
             <a href="mailto:lestevlestev8@gmail.com">
                 <img class="img-social" src="./images/gm.webp" alt="gmail" class="b-img">
             </a>
         </div>
     </section>
+
+    <div id="modal-container">
+        <div class="modal-background">
+            <div class="modal">
+                <!-- settlements-input -->
+                <form class="block form-js" style="margin: 0">
+                    <div class="b-text"></div>
+                    <div id="2-setinput-js" style="position: relative">
+                        <div style="position: relative;">
+                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" style="z-index: 6;"
+                                type="image/svg">
+                            <input type="text" class="input-dropdown" name="user_subject" maxlength="256"
+                                placeholder="Записаться на занятие" style="z-index: 5;" required>
+                        </div>
+                        <div class="dropdown" style="z-index: 4;">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="3-setinput-js" style="position: relative; margin-top: 1em;">
+                        <div style="position: relative;">
+                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg">
+                            <input type="text" class="input-dropdown" name="user_type" maxlength="256"
+                                placeholder="Роль" required>
+                        </div>
+                        <div class="dropdown">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <input class="b-input b-input_mgt1" name="user_email" placeholder="E-mail" type="text">
+                    <button type="submit" class="b-btnv1 submit-js">Отправить форму</button>
+                </form>
+                <!-- settlements-input END -->
+            </div>
+        </div>
+    </div>
 </body>
+
+<script src="./js/modal.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('6PfILWGqONJpgXe4M');
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        const modal_container = document.getElementById("modal-container");
+        const forms = document.querySelectorAll('.block.form-js');
+        const body = document.querySelector("body");
+        forms.forEach(function (form) {
+            var button = form.querySelector(".submit-js");
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number = Math.random() * 100000 | 0;
+                console.log(this.contact_number)
+                // these IDs from the previous steps
+                emailjs.sendForm('service_mcem11c', 'tytoschool_o3wx8gh', this)
+                    .then(function () {
+                        button.textContent = "Успешно отправлено";
+                        form.reset()
+                        setTimeout(() => {
+                            button.textContent = "Отправить форму";
+                            modal_container.classList.add("out");
+                            body.classList.remove("modal-active");
+                        }, 3000);
+                        console.log('SUCCESS!');
+
+                    }, function (error) {
+                        button.textContent = "Возникла Ошибка";
+                        form.reset()
+                        setTimeout(() => {
+                            button.textContent = "Отправить форму";
+                        }, 3000);
+                        console.log('FAILED...', error);
+                    });
+            });
+        });
+
+    }
+</script>
 
 </html>
