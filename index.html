@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/test.css">
     <link rel="stylesheet" href="./css/dropdown.css">
     <link rel="stylesheet" href="./css/modal.css">
+    <script defer src="./js/app.js"></script>
     <script defer src="./js/dropdown.js"></script>
 </head>
 
@@ -47,8 +48,8 @@
                     </div>
                 </div>
                 <input value="none" name="user_type" type="hidden">
-                <input autocomplete="off" class="b-input b-input_mgt1" name="user_email" placeholder="E-mail/Telegram/WhatsApp"
-                    type="text">
+                <input autocomplete="off" class="b-input b-input_mgt1" name="user_email"
+                    placeholder="E-mail/Telegram/WhatsApp" type="text">
                 <button type="button" class="b-btnv1 button-modjs">Далее</button>
             </form>
             <!-- settlements-input END -->
@@ -152,11 +153,12 @@
                             </ul>
                         </div>
                     </div>
-                    <input autocomplete="off" class="b-input b-input_mgt1" name="user_email" placeholder="E-mail/Telegram/WhatsApp"
-                        type="text">
+                    <input autocomplete="off" class="b-input b-input_mgt1" name="user_email"
+                        placeholder="E-mail/Telegram/WhatsApp" type="text" required>
                     <div id="3-setinput-js" style="position: relative; margin-top: 1em;">
                         <div style="position: relative;">
-                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg" style="z-index: 6;">
+                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg"
+                                style="z-index: 6;">
                             <input autocomplete="off" type="text" class="input-dropdown" name="user_type"
                                 maxlength="256" placeholder="Роль" style="z-index: 5;" required>
                         </div>
@@ -176,6 +178,7 @@
                             </ul>
                         </div>
                     </div>
+                    <input type="datetime-local" id="meeting-time" name="meeting_time" required/>
                     <button type="submit" class="b-btnv1 submit-js">Отправить форму</button>
                 </form>
                 <!-- settlements-input END -->
