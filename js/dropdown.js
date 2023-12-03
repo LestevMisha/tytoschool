@@ -84,10 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let sunp_1 = document.getElementById("1-setinput-js");
     let sunp_2 = document.getElementById("2-setinput-js");
     let sunp_3 = document.getElementById("3-setinput-js");
+    let sunp_4 = document.getElementById("4-setinput-js");
     var subjects = ['Английский', 'Математика', 'Биология', 'Химия', 'Программирование'];
     var options = ['Хочу стать преподавателем', 'Записаться на пробное занятие'];
+    var lesson_types = ['Индивидуальные занятия - 2000 ₽', 'Групповые занятия - 1000 ₽'];
     apply_drop(sunp_1, subjects)
     apply_drop(sunp_2, subjects)
     apply_drop(sunp_3, options)
+    apply_drop(sunp_4, lesson_types)
 
 });

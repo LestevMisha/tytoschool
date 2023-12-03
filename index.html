@@ -38,7 +38,7 @@
                 <div id="1-setinput-js" style="position: relative;">
                     <div style="position: relative;">
                         <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg">
-                        <input type="text" class="input-dropdown" name="user_subject" maxlength="256"
+                        <input autocomplete="off" type="text" class="input-dropdown" name="user_subject" maxlength="256"
                             placeholder="Записаться на занятие" required>
                     </div>
                     <div class="dropdown">
@@ -47,8 +47,9 @@
                     </div>
                 </div>
                 <input value="none" name="user_type" type="hidden">
-                <input class="b-input b-input_mgt1" name="user_email" placeholder="E-mail" type="text">
-                <button type="submit" class="b-btnv1 submit-js">Отправить форму</button>
+                <input autocomplete="off" class="b-input b-input_mgt1" name="user_email" placeholder="E-mail/Telegram/WhatsApp"
+                    type="text">
+                <button type="button" class="b-btnv1 button-modjs">Далее</button>
             </form>
             <!-- settlements-input END -->
         </div>
@@ -58,31 +59,51 @@
     <section class="b-section b-section-2">
         <div style="position: relative; width: fit-content;">
             <div class="b-text b-text_z1 b-text_fit b-texttit">Выбери направление!</div>
-            <div class="square">
-                <div class="square" style="background-color: #5bafe3;"></div>
+            <div class="square" style="border-radius: 0.1em 100%;">
+                <div class="square" style="border-radius: 0.5em 100%; background-color: #5bafe3;"></div>
             </div>
         </div>
         <div class="b-column" id="choices" style="padding: 2em; padding-top: 4em;">
 
             <div class="b-column b-column_custom">
-                <div class="b-text b-text_bback b-text_bback_v1">Индивидуальные занятия</div>
                 <ul class="ul_custom">
-                    <li>Индивидуальный подход</li>
-                    <li>Разработка личного плана</li>
-                    <li>Полное погружение в тему</li>
-                    <li>Возможнось выбора темы</li>
-                    <li>Гибкий график</li>
+                    <div class="b-text b-text_center b-text_bback b-text_bback_v1">Индивидуальные занятия</div>
+                    <li>
+                        <div class="cnum">1.</div>Индивидуальный подход
+                    </li>
+                    <li>
+                        <div class="cnum">2.</div>Разработка личного плана
+                    </li>
+                    <li>
+                        <div class="cnum">3.</div>Полное погружение в тему
+                    </li>
+                    <li>
+                        <div class="cnum">4.</div>Возможнось выбора темы
+                    </li>
+                    <li>
+                        <div class="cnum">5.</div>Гибкий график
+                    </li>
                 </ul>
                 <button class="b-btnv1 button-modjs">2000 ₽ 60 мин</button>
             </div>
             <div class="b-column b-column_custom" style="margin-top: 2em;">
-                <div class="b-text b-text_bback b-text_bback_v1">Групповые занятия</div>
                 <ul class="ul_custom">
-                    <li>Работа в группе</li>
-                    <li>Обучение по общему плану</li>
-                    <li>Интересные активити в группе</li>
-                    <li>Новые знакомства</li>
-                    <li>Скидка если приведешь друга</li>
+                    <div class="b-text b-text_center b-text_bback b-text_bback_v1">Групповые занятия</div>
+                    <li>
+                        <div class="cnum">1.</div>Работа в группе
+                    </li>
+                    <li>
+                        <div class="cnum">2.</div>Обучение по общему плану
+                    </li>
+                    <li>
+                        <div class="cnum">3.</div>Интересные активити в группе
+                    </li>
+                    <li>
+                        <div class="cnum">4.</div>Новые знакомства
+                    </li>
+                    <li>
+                        <div class="cnum">5.</div>Скидка если приведешь друга
+                    </li>
                 </ul>
                 <button class="b-btnv1 button-modjs">1000 ₽ 60 мин</button>
             </div>
@@ -121,28 +142,40 @@
                     <div class="b-text"></div>
                     <div id="2-setinput-js" style="position: relative">
                         <div style="position: relative;">
-                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" style="z-index: 6;"
+                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" style="z-index: 9;"
                                 type="image/svg">
-                            <input type="text" class="input-dropdown" name="user_subject" maxlength="256"
-                                placeholder="Записаться на занятие" style="z-index: 5;" required>
+                            <input autocomplete="off" type="text" class="input-dropdown" name="user_subject"
+                                maxlength="256" placeholder="Записаться на занятие" style="z-index: 8;" required>
+                        </div>
+                        <div class="dropdown" style="z-index: 7;">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <input autocomplete="off" class="b-input b-input_mgt1" name="user_email" placeholder="E-mail/Telegram/WhatsApp"
+                        type="text">
+                    <div id="3-setinput-js" style="position: relative; margin-top: 1em;">
+                        <div style="position: relative;">
+                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg" style="z-index: 6;">
+                            <input autocomplete="off" type="text" class="input-dropdown" name="user_type"
+                                maxlength="256" placeholder="Роль" style="z-index: 5;" required>
                         </div>
                         <div class="dropdown" style="z-index: 4;">
                             <ul>
                             </ul>
                         </div>
                     </div>
-                    <div id="3-setinput-js" style="position: relative; margin-top: 1em;">
+                    <div id="4-setinput-js" style="position: relative; margin-top: 1em;">
                         <div style="position: relative;">
                             <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg">
-                            <input type="text" class="input-dropdown" name="user_type" maxlength="256"
-                                placeholder="Роль" required>
+                            <input autocomplete="off" type="text" class="input-dropdown" name="user_lesson_type"
+                                maxlength="256" placeholder="Тип Занятия" required>
                         </div>
                         <div class="dropdown">
                             <ul>
                             </ul>
                         </div>
                     </div>
-                    <input class="b-input b-input_mgt1" name="user_email" placeholder="E-mail" type="text">
                     <button type="submit" class="b-btnv1 submit-js">Отправить форму</button>
                 </form>
                 <!-- settlements-input END -->
