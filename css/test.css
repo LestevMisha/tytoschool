@@ -46,11 +46,29 @@ li {
     padding-bottom: 0.5em;
 }
 
+.a-ellipse {
+    position: absolute;
+    top: -2em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 200%;
+    height: 20em;
+    z-index: 0;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
 /* b-text */
 .b-text {
     position: relative;
     font-size: 1em;
     text-wrap: nowrap;
+}
+
+.b-text.b-text_error {
+    font-size: 0.6em;
+    font-weight: 600;
+    color: #ff0000;
 }
 
 .b-text.b-text_z1 {
@@ -112,11 +130,13 @@ li {
 }
 
 .b-btnv1 {
+    position: relative;
+    z-index: 1;
     font-size: 1em;
     width: -webkit-fill-available;
     height: 3em;
     outline: none;
-    border-radius: 0.5em;
+    border-radius: 10em;
     border: 0.1em solid #fff;
     margin: 0;
     padding: 0;
@@ -181,7 +201,7 @@ ul.ul_custom {
     cursor: pointer;
 }
 
-input[name="user_email"]::placeholder {
+::placeholder {
     color: #878787 !important;
 }
 
@@ -231,6 +251,18 @@ input[name="user_email"]::placeholder {
     height: 100%;
 }
 
+.b-text-form {
+    font-size: 0.8em;
+    font-weight: 100;
+    text-align: left;
+    color: #FFFFFF;
+    margin: 1em 0 0.2em 0;
+}
+
+#conditional-appear {
+    display: none;
+}
+
 .b-img.b-img_logo {
     background: #FFF;
     width: 4em;
@@ -251,6 +283,7 @@ input[name="user_email"]::placeholder {
 }
 
 .b-section.b-section-1 {
+    padding-bottom: 4em;
     height: 40em;
 }
 
@@ -276,8 +309,9 @@ input[name="user_email"]::placeholder {
 }
 
 .b-img.b-img_v1 {
+    z-index: 0;
     position: absolute;
-    bottom: -2px;
+    bottom: 0.8em;
     right: 2em;
     width: 20em;
     height: auto;
@@ -286,11 +320,10 @@ input[name="user_email"]::placeholder {
 
 /* header */
 .header {
-    background-color: #5BAFE3;
+    background-color: #FFF;
     height: auto;
     width: 100%;
     padding: 0.5em;
-    border: 0.5em solid #FFF;
 }
 
 .menu {
@@ -365,8 +398,9 @@ input[name="user_email"]::placeholder {
     width: -webkit-fill-available;
     height: 3em;
     outline: none;
-    border-radius: 0.5em;
-    border: 0.1em solid #000;
+    border-radius: 10em;
+    border: none;
+    /* border: 0.1em solid #000; */
     margin: 0;
     padding: 0;
     text-indent: 1.125em;
@@ -393,7 +427,7 @@ input[name="user_email"]::placeholder {
         min-width: 22em;
     }
 
-    .b-btnv1 {
+    .block, .b-input, .b-btnv1 {
         min-width: 22em;
     }
 }
@@ -415,6 +449,7 @@ input[name="user_email"]::placeholder {
 }
 
 @media (min-width: 600px) {
+
     #items {
         display: flex;
     }
@@ -439,6 +474,9 @@ input[name="user_email"]::placeholder {
 @media (max-width: 599px) {
     #items .b-text {
         font-size: 2em;
+    }
+    .b-img.b-img_v1 {
+        right: -3em;
     }
 }
 
@@ -483,7 +521,7 @@ input[name="user_email"]::placeholder {
     }
 
     .b-section-1 {
-        height: 30em !important;
+        height: auto !important;
     }
 }
 

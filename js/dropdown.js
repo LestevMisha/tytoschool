@@ -32,10 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sttlements_setup().then(() => {
             let lis = ul.querySelectorAll(".settlement-item");
+            var cond_app = document.getElementById("conditional-appear");
+            var lesson_type_field = cond_app.querySelector("input[name='user_lesson_type']");
+            var meeting_time_field = cond_app.querySelector("input[name='meeting_time']");
             // insert chosen value and close dropdown (if tag li was clicked include arrow rotation) -->
             lis.forEach((li) => {
                 li.addEventListener("click", function () {
                     console.log(li.textContent)
+                    if (li.textContent == "Записаться на пробное занятие") {
+                        cond_app.style.display = "block";
+                        lesson_type_field.required = true;
+                        meeting_time_field.required = true;
+                    } else {
+                        cond_app.style.display = "none";
+                        lesson_type_field.required = false;
+                        meeting_time_field.required = false;
+                    }
                     input.value = li.textContent;
                     dropdown.style.height = "0";
                     arrow.classList.toggle("arrow_rotate");

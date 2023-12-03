@@ -34,7 +34,6 @@ body.modal-active {
 #modal-container .b-text {
     color: #FFF;
     width: fit-content;
-    margin-bottom: 1em;
 }
 
 #modal-container.button-modjs {

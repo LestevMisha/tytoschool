@@ -10,13 +10,18 @@
     <link rel="stylesheet" href="./css/modal.css">
     <script defer src="./js/app.js"></script>
     <script defer src="./js/dropdown.js"></script>
+    <!-- Phone Mask lib -->
+    <script src="./inputmask-phones/js/mask.js"></script>
+    <script src="./inputmask-phones/js/mask_list.js"></script>
 </head>
 
 <body>
     <div class="header" id="header">
         <div class="b-row b-row_spacebtw">
             <div class="b-row b-row_fit">
-                <img class="b-img b-img_logo" src="./images/logo.png" alt="logo">
+                <a class="b-text b-text_bold b-text_1.5em b-text_mgl1em" href="./index.html">
+                    <img class="b-img b-img_logo" src="./images/logo.png" alt="logo">
+                </a>
                 <a class="b-text b-text_bold b-text_1.5em b-text_mgl1em" href="./index.html">TYTOSCHOOL</a>
             </div>
             <!-- <img src="./images/menu.svg" alt="menu" class="menu">
@@ -47,9 +52,11 @@
                         </ul>
                     </div>
                 </div>
+                <div id="1-setinput-js_errorlbl" class="b-text b-text_error"></div>
                 <input value="none" name="user_type" type="hidden">
                 <input autocomplete="off" class="b-input b-input_mgt1" name="user_email"
-                    placeholder="E-mail/Telegram/WhatsApp" type="text">
+                    placeholder="E-mail/Telegram/WhatsApp" type="text" required>
+                <div id="user-email_errorlbl" class="b-text b-text_error"></div>
                 <button type="button" class="b-btnv1 button-modjs">Далее</button>
             </form>
             <!-- settlements-input END -->
@@ -58,6 +65,7 @@
     </section>
 
     <section class="b-section b-section-2">
+        <div class="a-ellipse"></div>
         <div style="position: relative; width: fit-content;">
             <div class="b-text b-text_z1 b-text_fit b-texttit">Выбери направление!</div>
             <div class="square" style="border-radius: 0.1em 100%;">
@@ -141,44 +149,66 @@
                 <!-- settlements-input -->
                 <form class="block form-js" style="margin: 0">
                     <div class="b-text"></div>
+
+                    <!-- Sub-drop start -->
+                    <div class="b-text-form">Выберите предмет:</div>
                     <div id="2-setinput-js" style="position: relative">
                         <div style="position: relative;">
-                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" style="z-index: 9;"
+                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" style="z-index: 100;"
                                 type="image/svg">
                             <input autocomplete="off" type="text" class="input-dropdown" name="user_subject"
-                                maxlength="256" placeholder="Записаться на занятие" style="z-index: 8;" required>
+                                maxlength="256" placeholder="Записаться на занятие" style="z-index: 99;" required>
                         </div>
-                        <div class="dropdown" style="z-index: 7;">
+                        <div class="dropdown" style="z-index: 98;">
                             <ul>
                             </ul>
                         </div>
                     </div>
-                    <input autocomplete="off" class="b-input b-input_mgt1" name="user_email"
-                        placeholder="E-mail/Telegram/WhatsApp" type="text" required>
-                    <div id="3-setinput-js" style="position: relative; margin-top: 1em;">
+                    <!-- Sub-drop end -->
+
+                    <!-- E-mail start -->
+                    <div class="b-text-form">Введите вашу почту:</div>
+                    <input autocomplete="off" class="b-input" name="user_email"
+                        placeholder="E-mail" type="text" required>
+                    <!-- E-mail end -->
+
+                    <!-- Phone start -->
+                    <div class="b-text-form">Введите ваш номер телефона:</div>
+                    <input id="phone" class="b-input" type="text" name="user_phone" value="">
+                    <script>mask("#phone");</script>
+                    <!-- Phone end -->
+
+                    <!-- Role start -->
+                    <div class="b-text-form">Введите вашу роль:</div>
+                    <div id="3-setinput-js" style="position: relative;">
                         <div style="position: relative;">
                             <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg"
-                                style="z-index: 6;">
+                                style="z-index: 97;">
                             <input autocomplete="off" type="text" class="input-dropdown" name="user_type"
-                                maxlength="256" placeholder="Роль" style="z-index: 5;" required>
+                                maxlength="256" placeholder="Роль" style="z-index: 96;" required>
                         </div>
-                        <div class="dropdown" style="z-index: 4;">
+                        <div class="dropdown" style="z-index: 95;">
                             <ul>
                             </ul>
                         </div>
                     </div>
-                    <div id="4-setinput-js" style="position: relative; margin-top: 1em;">
-                        <div style="position: relative;">
-                            <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg">
-                            <input autocomplete="off" type="text" class="input-dropdown" name="user_lesson_type"
-                                maxlength="256" placeholder="Тип Занятия" required>
+                    <!-- Role start -->
+
+                    <div id="conditional-appear">
+                        <div id="4-setinput-js" style="position: relative; margin-top: 1em;">
+                            <div style="position: relative;">
+                                <img class="dropdown-arrow" src="./images/settlement-arrow.svg" type="image/svg">
+                                <input autocomplete="off" type="text" class="input-dropdown" name="user_lesson_type"
+                                    maxlength="256" placeholder="Тип Занятия">
+                            </div>
+                            <div class="dropdown">
+                                <ul>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="dropdown">
-                            <ul>
-                            </ul>
-                        </div>
+                        <input type="datetime-local" id="meeting-time" name="meeting_time" />
                     </div>
-                    <input type="datetime-local" id="meeting-time" name="meeting_time" required/>
+
                     <button type="submit" class="b-btnv1 submit-js">Отправить форму</button>
                 </form>
                 <!-- settlements-input END -->
@@ -203,6 +233,7 @@
         forms.forEach(function (form) {
             var button = form.querySelector(".submit-js");
             form.addEventListener('submit', function (event) {
+                console.log("123..")
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 this.contact_number = Math.random() * 100000 | 0;
