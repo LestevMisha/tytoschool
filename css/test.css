@@ -224,6 +224,7 @@ ul.ul_custom {
     background-color: #000000;
     font-weight: 700;
     color: #FFFFFF;
+    animation: 1s ease-in-out 0s 1 slideInFromLeft;
 }
 
 .b-text_bold {
@@ -316,6 +317,7 @@ ul.ul_custom {
     width: 20em;
     height: auto;
     filter: drop-shadow(1em 4px 0px #000);
+    animation: 1s cubic-bezier(1, 0, 0, 1) 0s 1 slideInFromRight;
 }
 
 /* header */
@@ -413,6 +415,23 @@ ul.ul_custom {
     margin-top: 1em;
 }
 
+/* Anim */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
 /* Adaptivity */
 @media (max-width: 310px) {
     .b-text.b-text_v1 {
@@ -478,6 +497,18 @@ ul.ul_custom {
     .b-img.b-img_v1 {
         right: -3em;
     }
+
+    .c-datepicker-date-picker.has-sidebar {
+        width: 92% !important;
+    }
+    .c-datepicker-picker__sidebar {
+        display: none !important;
+    }
+
+    .c-datepicker-picker__body {
+        margin-left: 0 !important;
+    }
+    
 }
 
 @media (min-width: 800px) {
