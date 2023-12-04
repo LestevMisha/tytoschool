@@ -46,6 +46,8 @@ body.modal-active {
 }
 
 #modal-container.button-modjs .modal-background .modal {
+    overflow-y: scroll;
+    max-height: 28em;
     opacity: 0;
     animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }

@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         cond_app.style.display = "block";
                         lesson_type_field.required = true;
                         meeting_time_field.required = true;
-                    } else {
+                    } else if (li.textContent == "Хочу стать преподавателем") {
                         cond_app.style.display = "none";
                         lesson_type_field.required = false;
                         meeting_time_field.required = false;
