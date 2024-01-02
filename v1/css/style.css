@@ -1,0 +1,288 @@
+
+.header {
+    width: 100%;
+    height: 7.9em;
+    position: absolute;
+    background-color: #FFFFFF;
+    padding: 1em;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.b-row {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.b-row.b-row_fitcontent {
+    width: fit-content;
+}
+
+.b-row.b-row_spaceevenly {
+    justify-content: space-evenly;
+}
+
+.b-row.b-row_spacebtw {
+    justify-content: space-between;
+}
+
+.b-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.b-column.b-column_fitcenter {
+    width: fit-content;
+    align-items: center;
+}
+
+.b-column.b-column_v1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    margin-left: 4em;
+}
+
+.b-column_custom {
+    width: 33%;
+    height: 100%;
+    padding: 3em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.b-column.b-column_center {
+    align-items: center;
+}
+
+.b-img {
+    width: auto;
+    height: 100%;
+}
+
+.b-img.b-img_v1 {
+    position: absolute;
+    bottom: -2px;
+    right: 3.6em;
+    width: 30em;
+    height: min-content;
+}
+
+.b-img.b-img_v2 {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 35em;
+    height: min-content;
+}
+
+.b-text {
+    font-size: 1em;
+    height: fit-content;
+    width: fit-content;
+}
+
+.b-text.b-text_bback {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding: 0.5em 2em;
+    background-color: #004AAD;
+    border-radius: 2em;
+}
+
+.b-text.b-text_bback.b-text_bback_v1 {
+    padding: 1em 2em;
+}
+
+.b-text.b-text_white {
+    color: #FFFFFF;
+}
+
+.b-text.b-text_4em {
+    font-size: 4em;
+}
+
+.b-text.b-text_2em {
+    font-size: 2em;
+}
+
+.b-text.b-text_1\.5em {
+    font-size: 1.5em;
+}
+
+.b-text.b-text_pointer {
+    cursor: pointer;
+}
+
+.b-text.b-text_b {
+    font-weight: 700;
+}
+
+.b-text.b-text_center {
+    text-align: center;
+}
+
+.b-text.b-text_mgt1 {
+    margin-top: 1em;
+}
+
+.b-text.b-text_v1 {
+    font-size: 2em;
+    margin: 0 0 1em 0;
+    padding: 0 1em;
+    background-color: #F76F6F;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.b-section {
+    position: relative;
+}
+
+.b-section.b-section_preheader {
+    background-color: #5BAFE3;
+    margin-top: 7.9em;
+    height: 32em;
+    min-height: 32em;
+}
+
+.b-section.b-section_btm {
+    width: 100%;
+    min-height: 7.9em;
+    display: flex;
+    align-items: center;
+}
+
+.b-section.b-section_2 {
+    margin-top: 1px;
+    background-color: #5BAFE3;
+    height: 38em;
+    min-height: 40em;
+}
+
+.b-btn {
+    height: 3.66em;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 2em;
+    width: 18.26em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.abs-decor {
+    position: absolute;
+    z-index: -1;
+    background-color: #DD4B59;
+    top: 20%;
+    transform: translate(0, -20%);
+    left: -4em;
+    width: 32em;
+    height: 5.6em;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.img-social {
+    width: 3.5em;
+    margin-right: 1em;
+}
+
+ul.ul_custom {
+    font-size: 1.2em;
+    background-color: #F7EEFF;
+    border-radius: 1em;
+    padding: 1em 2em;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 2em;
+    height: 3px;
+    background-color: #000000;
+    margin: 0.2em 1em;
+}
+
+.b-row.b-row_spaceevenly.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 10em;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    background-color: #FFFFFF;
+    border-radius: 1em;
+    border: 0.1em solid #000;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 992px) {
+    html, body {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .b-row_spaceevenly {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menuItems {
+        display: none;
+    }
+
+    #menuItems.show {
+        display: flex;
+    }
+    
+    .b-img.b-img_v1 {
+        width: 20em;
+    }
+}
+
+@media (max-width: 600px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    .b-img.b-img_v1 {
+        width: 15em;
+    }
+}
+
+@media (max-width: 280px) {
+    html, body {
+        font-size: 12px;
+        min-width: 280px;
+    }
+
+}
