@@ -688,6 +688,7 @@ body,
 #slider {
     width: 100vw;
     overflow-x: scroll;
+    overflow-y: hidden;
     padding: 1em 0;
 }
 
