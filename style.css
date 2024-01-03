@@ -19,8 +19,10 @@ body,
 }
 
 .b-section.b-section_gradblue.b-section_gradblue_v1 {
+    height: auto;
+    padding-top: 5em;
     top: -5em;
-    z-index: -1;
+    min-height: unset;
 }
 
 .b-section.b-section_2 {
@@ -28,6 +30,7 @@ body,
     border-radius: 5em;
     margin-top: -5em;
     background-color: #FFFFFF;
+    z-index: 2;
 }
 
 * {
@@ -48,9 +51,33 @@ body,
     height: auto;
 }
 
+.b-img.b-img_author_ushoulders {
+    position: relative;
+    bottom: 0;
+    margin-left: auto;
+    width: 12em;
+}
+
+.b-img.b-img_logo-lightning {
+    position: absolute;
+    width: 10em;
+    bottom: 2em;
+    left: 6em;
+    rotate: -10deg;
+    filter: drop-shadow(0.1em 0.2em 5em rgba(255, 220, 0, 1));
+}
+
 .b-img.b-img_logo {
     width: 5em;
     height: auto;
+}
+
+.b-img.b-img_books {
+    width: 8em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    rotate: 45deg;
 }
 
 .b-img.b-img_face {
@@ -79,11 +106,6 @@ body,
     width: 40em;
     transform: scaleX(-1);
     bottom: 0;
-    /* position: absolute;
-    width: 40em;
-    transform: scaleX(-1);
-    bottom: -6em;
-    left: -3em; */
 }
 
 .mgtb2-1 {
@@ -91,8 +113,20 @@ body,
     margin-bottom: 1em !important;
 }
 
+.mgtb1 {
+    margin: 1em 0 !important;
+}
+
 .mgb1 {
     margin-bottom: 1em !important;
+}
+
+.mgt1 {
+    margin-top: 1em !important;
+}
+
+.mgt0\.5 {
+    margin-top: 0.5em !important;
 }
 
 .pdt1 {
@@ -111,6 +145,13 @@ body,
     color: #FFFFFF;
 }
 
+.b-text.b-text_yellow_large {
+    color: transparent;
+    background-image: linear-gradient(0turn, rgba(255, 242, 0, 1) 0%, rgba(255, 220, 0, 1) 100%);
+    -webkit-background-clip: text;
+    will-change: transform;
+}
+
 .b-text.b-text_abs-center {
     position: absolute;
     top: 1em;
@@ -120,6 +161,10 @@ body,
 
 .b-text.b-text_black {
     color: #000000;
+}
+
+.b-text.b-text_opacity-0\.6 {
+    opacity: 0.6;
 }
 
 .b-text.b-text_center {
@@ -135,8 +180,16 @@ body,
     font-size: 5em;
 }
 
+.b-text.b-text_2\.125em {
+    font-size: 2.125em;
+}
+
 .b-text.b-text_1\.25em {
     font-size: 1.25em;
+}
+
+.b-text.b-text_1\.125em {
+    font-size: 1.125em;
 }
 
 .b-text.b-text_0\.75em {
@@ -163,6 +216,10 @@ body,
     font-weight: 400;
 }
 
+.b-text.b-text_500 {
+    font-weight: 500;
+}
+
 .b-text.b-text_600 {
     font-weight: 600;
 }
@@ -184,6 +241,24 @@ body,
     flex-direction: column;
     width: fit-content;
     height: fit-content;
+}
+
+.vblock.vblock_50\% {
+    width: 50%;
+}
+
+.vblock.vblock_v3 {
+    border-radius: 1.5em;
+    background-color: #ffffff0D;
+    padding: 1.5em 1.5em 0 1.5em;
+    align-items: flex-start;
+}
+
+.vblock.vblock_v2 {
+    border-radius: 1.5em;
+    border: 0.1em solid #ffffff33;
+    padding: 1.5em;
+    align-items: flex-start;
 }
 
 .vblock.vblock_v1 {
@@ -248,6 +323,10 @@ body,
     width: 100%;
 }
 
+.hblock.hblock_50\% {
+    width: 60%;
+}
+
 .hblock.hblock_gap {
     gap: 1em;
 }
@@ -292,7 +371,25 @@ body,
     }
 
     50% {
-        transform: translate(0, -0.05em);
+        transform: translate(0, -0.1em);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.floating_intense {
+    animation: floating_intense 4s ease-in-out infinite;
+}
+
+@keyframes floating_intense {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -0.5em);
     }
 
     100% {
@@ -318,6 +415,28 @@ body,
     }
 }
 
+@media (width <=35.5em) {
+    #slider * {
+        font-size: 14px;
+    }
+
+    .vblock.vblock_v2 {
+        font-size: 14px !important;
+    }
+    .vblock.vblock_v3 {
+        font-size: 14px !important;
+    }
+    .b-img.b-img_author_ushoulders {
+        font-size: 14px !important;
+    }
+    .label {
+        font-size: 14px !important;
+    }
+    .b-img.b-img_books {
+        font-size: 14px !important;
+    }
+}
+
 /* ≥0px  */
 @media (width >=0em) {
     .b-container {
@@ -335,6 +454,7 @@ body,
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 }
 
@@ -414,26 +534,56 @@ body,
     #custom_mobile .b-text.b-text_btn-style {
         z-index: 2;
     }
+
+    .vblock.vblock_v2 {
+        font-size: 24px;
+    }
+    .vblock.vblock_v3 {
+        font-size: 24px;
+    }
+    .b-img.b-img_author_ushoulders {
+        font-size: 24px;
+    }
+    .label {
+        font-size: 24px;
+    }
+    .b-img.b-img_books {
+        font-size: 20px;
+    }
+
+    .b-img.b-img_logo-lightning {
+        display: none;
+    }
+
 }
 
 /* ≥1920px */
 @media (width >=120em) {
+    * {
+        font-size: 22px;
+    }
     .b-container {
-        max-width: 120em;
+        max-width: 80em;
     }
 }
 
 /* ≥2560px */
 @media (width >=160em) {
+    * {
+        font-size: 28px;
+    }
     .b-container {
-        max-width: 160em;
+        max-width: 80em;
     }
 }
 
 /* ≥3840px */
 @media (width >=240em) {
+    * {
+        font-size: 36px;
+    }
     .b-container {
-        max-width: 240em;
+        max-width: 100em;
     }
 }
 
@@ -469,6 +619,9 @@ body,
 .span_custom {
     font-weight: 400;
     text-wrap: nowrap;
+    /* text-wrap doesn't work for Safari */
+    white-space: nowrap;
+    /* white-space for Safari */
     position: relative;
     font-size: 1.5rem;
     padding: 0.6em 2em;
@@ -498,6 +651,15 @@ body,
     opacity: 1;
 }
 
+.yellow-light.yellow-light_v2 {
+    width: 20em;
+    height: 20em;
+    top: 50%;
+    right: -20%;
+    transform: translate(0, -50%);
+    opacity: 0.2;
+}
+
 .circle {
     position: absolute;
     top: 50%;
@@ -514,12 +676,13 @@ body,
 }
 
 .divider {
-    height: 0.05em;
+    width: 100%;
     opacity: 0.2;
     background-color: #ffffff;
     background-position: center center;
     border-color: transparent;
     border-style: solid;
+    border-width: 0.1em;
 }
 
 #slider {
@@ -535,4 +698,30 @@ body,
 .space {
     width: 50vw;
     min-width: 50vw;
+}
+
+.blured_white_spot {
+    position: absolute;
+    top: -18em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 0;
+    width: 25em;
+    height: 25em;
+    border-radius: 3000px;
+    opacity: 0.2;
+    background-color: #ffffff;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    filter: blur(5em);
+}
+
+.label {
+    position: absolute;
+    bottom: 5em;
+    background-color: #FFFFFF;
+    border-radius: 1em 1em 0 2em;
+    width: fit-content;
+    padding: 1em;
 }
