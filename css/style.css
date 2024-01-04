@@ -48,14 +48,16 @@ body,
 }
 
 .b-section.b-section_2 {
-    padding: 3em 0;
+    padding: 5em 0;
     border-radius: 5em;
     background-color: #FFFFFF;
     z-index: 2;
 }
 
 .b-section.b-section_2.b-section_2_v1 {
-    background-color: #009dff;
+    padding: 5em 0 0 0;
+    border-radius: 0;
+    background-color: #000000FF;
 }
 
 * {
@@ -137,6 +139,10 @@ body,
     cursor: pointer;
 }
 
+.b-img.b-img_logo.b-img_logo_v1 {
+    width: 10em;
+}
+
 .b-img_logo:hover {
     transform: translateY(-0.5em);
 }
@@ -201,6 +207,10 @@ body,
 
 .mgb2 {
     margin-bottom: 2em !important;
+}
+
+.mgb3 {
+    margin-bottom: 3em !important;
 }
 
 .mgb0\.5 {
@@ -631,49 +641,49 @@ body,
 @font-face {
     font-family: "Mont";
     font-weight: 100;
-    src: url("./font/Mont/Mont-Hairline.otf");
+    src: url("../font/Mont/Mont-Hairline.otf");
 }
 
 @font-face {
     font-family: "Mont";
     font-weight: 150;
-    src: url("./font/Mont/Mont-Thin.otf");
+    src: url("../font/Mont/Mont-Thin.otf");
 }
 
 @font-face {
     font-family: "Mont";
     font-weight: 200;
-    src: url("./font/Mont/Mont-ExtraLight.otf");
+    src: url("../font/Mont/Mont-ExtraLight.otf");
 }
 
 @font-face {
     font-family: "Mont";
     font-weight: 300;
-    src: url("./font/Mont/Mont-Light.otf");
+    src: url("../font/Mont/Mont-Light.otf");
 }
 
 @font-face {
     font-family: "Mont";
     font-weight: 400;
-    src: url("./font/Mont/Mont-Book.otf");
+    src: url("../font/Mont/Mont-Book.otf");
 }
 
 @font-face {
     font-family: "Mont";
     font-weight: 500;
-    src: url("./font/Mont/Mont-Regular.otf");
+    src: url("../font/Mont/Mont-Regular.otf");
 }
 
 @font-face {
     font-family: "Mont";
     font-weight: 600;
-    src: url("./font/Mont/Mont-SemiBold.otf");
+    src: url("../font/Mont/Mont-SemiBold.otf");
 }
 
 @font-face {
     font-family: "Mont";
     font-weight: 700;
-    src: url("./font/Mont/Mont-Bold.otf");
+    src: url("../font/Mont/Mont-Bold.otf");
 }
 
 /* ----- FONT ----- */
@@ -803,6 +813,14 @@ body,
     justify-content: center;
     align-items: center;
     padding: 1em;
+}
+
+.background-image_grad-blue {
+    background-image: linear-gradient(to bottom, #000000FF, rgb(9 5 22));
+}
+
+.background-image_grad-blue-rev {
+    background-image: linear-gradient(to bottom, rgb(9 5 22), #000000FF);
 }
 
 @media (width <=400px) {
@@ -1043,6 +1061,9 @@ body,
     .b-container {
         max-width: 80em;
     }
+    #breakpoint_fix {
+        font-size: 10px;
+    }
 }
 @media (width >=87.5em) {
     section {
@@ -1050,16 +1071,25 @@ body,
     }
 }
 @media (width >=120em) {
+    #breakpoint_fix {
+        font-size: 16px;
+    }
     section {
         font-size: 22px;
     }
 }
 @media (width >=160em) {
+    #breakpoint_fix {
+        font-size: 22px;
+    }
     section {
         font-size: 28px;
     }
 }
 @media (width >=240em) {
+    #breakpoint_fix {
+        font-size: 28px;
+    }
     section {
         font-size: 34px;
     }

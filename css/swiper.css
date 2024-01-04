@@ -36,6 +36,21 @@
     opacity: 0.5;
 }
 
-.swiper-wrapper {
-    align-items: center;
+/* CUSTOM */
+#breakpoint_fix .swiper-pagination {
+    top: 0 !important;
+}
+
+#breakpoint_fix .swiper-pagination-bullet {
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    font-size: 12px;
+    color: #000000;
+    background: #FFFFFF;
+}
+
+#breakpoint_fix .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
 }
