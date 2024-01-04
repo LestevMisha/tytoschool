@@ -97,6 +97,10 @@ body,
     width: 3em;
 }
 
+.b-img.b-img_circle.b-img_circle_v1 {
+    width: 2em;
+}
+
 .b-img.b-img_efaces {
     position: absolute;
     right: 0em;
@@ -240,10 +244,9 @@ body,
     height: fit-content;
     color: #FFFFFF;
 }
-
 .b-text.b-text_red {
     color: transparent;
-    background-image: linear-gradient(0turn, rgba(255, 57, 14, 1) 0%, rgba(236, 74, 20, 1) 100%);
+    background-image: linear-gradient(0turn,rgba(255,57,14,1) 0%,rgba(236,74,20,1) 100%);
     -webkit-background-clip: text;
 }
 
@@ -373,10 +376,6 @@ body,
     height: fit-content;
 }
 
-.vblock.vblock_height-auto {
-    height: auto;
-}
-
 .vblock.vblock_center {
     align-items: center;
     justify-content: center;
@@ -393,9 +392,8 @@ body,
 .vblock.vblock_v6 {
     width: 100%;
     border-radius: 2em;
-    padding: 3em;
-    background: linear-gradient(0turn, rgba(255, 57, 14, 0.05) 0%, rgba(236, 74, 20, 0.05) 100%);
-}
+    padding: 1em;
+    background: linear-gradient(0turn,rgba(255,57,14,0.05) 0%,rgba(236,74,20,0.05) 100%);}
 
 .vblock.vblock_v5 {
     background-color: #ffffff1A;
@@ -430,8 +428,11 @@ body,
 }
 
 .vblock.vblock_v1.vblock_v1_v1 {
-    width: 45em;
-    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    padding: 2em;
+    border-radius: 2em;
     background-color: #FFFFFF;
 }
 
@@ -502,11 +503,6 @@ body,
     justify-content: center;
 }
 
-.vblock_v1.vblock_v1_v1 .hblock.hblock_center {
-    align-items: center !important;
-    justify-content: center !important;
-}
-
 .hblock.hblock_100\% {
     width: 100%;
 }
@@ -553,7 +549,8 @@ body,
 }
 
 .b-btn.b-btn_v1.b-btn_v1_v1 {
-    background: linear-gradient(0turn, rgba(255, 57, 14, 1) 0%, rgba(236, 74, 20, 1) 100%);
+    font-size: 1em !important;
+    background: linear-gradient(0turn,rgba(255,57,14,1) 0%,rgba(236,74,20,1) 100%);
 }
 
 .b-btn.b-btn_v1:hover {
@@ -758,7 +755,7 @@ body,
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 1em 0;
-    /* align-items: flex-start; */
+    align-items: flex-start;
 }
 
 #slider * {
@@ -911,155 +908,75 @@ body,
 
 
 
-/* VARIATION */
 /* >=0px */
-/* @media (width >=0px) {
-    section {
-        font-size: 7px;
-    }
-
-    .b-container {
-        max-width: 100%;
-    }
-} */
-
-/* >=350px */
-/* @media (width >=350px) {
-    section {
-        font-size: 8px;
-    }
-
-    .b-container {
-        max-width: 48em;
-    }
-} */
-
-/* >=768px */
-/* @media (width >=48em) {
-    section {
-        font-size: 8px;
-    }
-
-    .b-container {
-        max-width: 64em;
-    }
-} */
-
-/* >=1024px */
-/* @media (width >=64em) {} */
-
-/* >=1280px */
-/* @media (width >=80em) {
-    section {
-        font-size: 9px;
-    }
-
-    .b-container {
-        max-width: 80em;
-    }
-} */
-
-/* >=1400px */
-/* @media (width >=87.5em) {
-    section {
-        font-size: 10px;
-    }
-} */
-
-/* >=1600px */
-/* @media (width >=1600px) {
-    section {
-        font-size: 11px;
-    }
-} */
-
-/* >=1800px */
-/* @media (width >=1800px) {
-    section {
-        font-size: 12px;
-    }
-} */
-
-/* >=1920px */
-/* @media (width >=120em) {
-    section {
-        font-size: 13px;
-    }
-} */
-
-/* >=2160px */
-/* @media (width >=2160px) {
-    section {
-        font-size: 15px;
-    }
-} */
-
-/* >=2560px */
-/* @media (width >=160em) {
-    section {
-        font-size: 20px;
-    }
-} */
-
-/* >=3840px */
-/* @media (width >=240em) {
-    section {
-        font-size: 30px;
-    }
-} */
-
-
-
-
-
 @media (width >=0px) {
     section {
         font-size: 7px;
     }
+
     .b-container {
         max-width: 100%;
     }
 }
+
+/* >=350px */
 @media (width >=350px) {
     section {
         font-size: 8px;
     }
+
     .b-container {
         max-width: 48em;
     }
 }
+
+/* >=768px */
 @media (width >=48em) {
     section {
         font-size: 12px;
     }
+
     .b-container {
         max-width: 64em;
     }
 }
+
+/* >=1024px */
 @media (width >=64em) {}
+
+/* >=1280px */
 @media (width >=80em) {
     section {
         font-size: 14px;
     }
+
     .b-container {
         max-width: 80em;
     }
 }
+
+/* >=1400px */
 @media (width >=87.5em) {
     section {
         font-size: 16px;
     }
 }
+
+/* >=1920px */
 @media (width >=120em) {
     section {
         font-size: 22px;
     }
 }
+
+/* >=2560px */
 @media (width >=160em) {
     section {
         font-size: 28px;
     }
 }
+
+/* >=3840px */
 @media (width >=240em) {
     section {
         font-size: 34px;
