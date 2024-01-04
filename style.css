@@ -430,14 +430,13 @@ body,
 }
 
 .vblock.vblock_v1.vblock_v1_v1 {
-    width: 45em;
+    width: 100%;
     height: 100%;
     background-color: #FFFFFF;
 }
 
 .vblock.vblock_v1 {
-    min-width: 35em;
-    width: 35em;
+    width: auto;
     height: 30em;
     border-radius: 4em;
     padding: 3em;
@@ -753,15 +752,15 @@ body,
     border-width: 0.1em;
 }
 
-#slider {
-    width: 100vw;
+.slider {
+    width: auto;
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 1em 0;
     /* align-items: flex-start; */
 }
 
-#slider * {
+.slider * {
     align-items: flex-start;
 }
 
