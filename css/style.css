@@ -109,10 +109,11 @@ body,
 
 .b-img.b-img_finger-click {
     position: absolute;
-    right: -2em;
-    bottom: -1em;
-    width: 3em;
-    height: 3em;
+    right: -1em;
+    bottom: -1.8em;
+    width: 2.5em;
+    height: 2.5em;
+    transition: all 0.225s ease-in-out;
 }
 
 .b-img.b-img_author_ushoulders {
@@ -422,7 +423,7 @@ body,
 
 .vblock.vblock_v4.vblock_v4_v1 {
     height: auto;
-    background-color: #009dff;
+    background-color: #ffffff26;
 }
 
 .vblock.vblock_v3 {
@@ -447,7 +448,7 @@ body,
 
 .vblock.vblock_v1 {
     width: auto;
-    height: 30em;
+    height: auto;
     border-radius: 4em;
     padding: 3em;
 }
@@ -559,7 +560,15 @@ body,
     color: #FFF;
     transition: all 0.225s ease-in-out;
     cursor: pointer;
+    z-index: 1;
 }
+
+
+.b-btn.b-btn_v1:hover > .b-img.b-img_finger-click {
+    scale: 1.1;
+    transform: translateX(-1em) translateY(-1em) !important;
+}
+
 
 .b-btn.b-btn_v1.b-btn_v1_v1 {
     background: linear-gradient(0turn, rgba(255, 57, 14, 1) 0%, rgba(236, 74, 20, 1) 100%);

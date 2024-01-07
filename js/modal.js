@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
             modal_container.removeAttribute("class");
             modal_container.classList.add("button-modjs");
             body.classList.add("modal-active");
+            var text = e.target.closest(".vblock_v6").querySelector(".price").textContent;
+            var input = modal_container.querySelector("input[name='user_plan']")
+            input.value = text;
         });
     });
 

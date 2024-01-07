@@ -39,6 +39,11 @@
 /* CUSTOM */
 #breakpoint_fix .swiper-pagination {
     top: 0 !important;
+    height: fit-content !important;
+}
+
+.mySwiper .swiper-pagination {
+    display: none;
 }
 
 #breakpoint_fix .swiper-pagination-bullet {
@@ -53,4 +58,11 @@
 #breakpoint_fix .swiper-pagination-bullet-active {
     color: #fff;
     background: #007aff;
+}
+
+/* >=768px */
+@media (width >=48em) {
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
 }

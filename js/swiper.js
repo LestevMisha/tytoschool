@@ -68,4 +68,24 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  // swipe by click
+  const swiper_element = document.querySelector("div.swiper.mySwiper");
+  const swiper1_element = document.querySelector("div.swiper.mySwiper1");
+  apply_click(swiper_element, swiper)
+  apply_click(swiper1_element, swiper1)
+
+  function apply_click (element, swiper) {
+    element.addEventListener("click", (e) => {
+      var tmp_el = e.target.closest(".swiper-slide")
+      if (tmp_el !== null && tmp_el !== undefined) {
+        if (tmp_el.classList.contains("swiper-slide-next")) {
+          swiper.slideNext();
+        } else if (tmp_el.classList.contains("swiper-slide-prev")) {
+          swiper.slidePrev();
+        }
+      }
+    });
+  }
+
 });
