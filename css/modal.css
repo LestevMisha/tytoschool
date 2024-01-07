@@ -19,6 +19,7 @@ body.modal-active {
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
     vertical-align: middle;
+    z-index: 10 !important;
 }
 
 #modal-container .modal-background .modal {
@@ -31,6 +32,7 @@ body.modal-active {
     width: 80%;
     min-width: 300px;
     max-width: 30em;
+    z-index: 11 !important;
 }
 
 #modal-container .b-text {
