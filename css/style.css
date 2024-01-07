@@ -823,6 +823,30 @@ body,
     background-image: linear-gradient(to bottom, rgb(9 5 22), #000000FF);
 }
 
+.b-btnv1 {
+    width: 100%;
+    border: honeydew;
+    border-radius: 1em;
+    height: 2.5em;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px 10px #009dff33;
+    background: #009dff;
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    width: 100%;
+    height: 2.5em;
+    color: #000;
+    text-indent: 1em;
+    text-align: left;
+    font-size: 1em;
+}
+
 @media (width <=400px) {
     .b-section {
         min-width: 300px !important;
@@ -930,7 +954,7 @@ body,
 
 /* VARIATION */
 /* >=0px */
-/* @media (width >=0px) {
+@media (width >=0px) {
     section {
         font-size: 7px;
     }
@@ -938,10 +962,10 @@ body,
     .b-container {
         max-width: 100%;
     }
-} */
+}
 
 /* >=350px */
-/* @media (width >=350px) {
+@media (width >=350px) {
     section {
         font-size: 8px;
     }
@@ -949,10 +973,10 @@ body,
     .b-container {
         max-width: 48em;
     }
-} */
+}
 
 /* >=768px */
-/* @media (width >=48em) {
+@media (width >=48em) {
     section {
         font-size: 8px;
     }
@@ -960,75 +984,99 @@ body,
     .b-container {
         max-width: 64em;
     }
-} */
+}
 
 /* >=1024px */
-/* @media (width >=64em) {} */
+@media (width >=64em) {}
 
 /* >=1280px */
-/* @media (width >=80em) {
-    section {
+@media (width >=80em) {
+    .modal, section {
         font-size: 9px;
     }
 
     .b-container {
         max-width: 80em;
     }
-} */
+}
 
 /* >=1400px */
-/* @media (width >=87.5em) {
-    section {
-        font-size: 10px;
+@media (width >=87.5em) {
+    #breakpoint_fix {
+        font-size: 8px;
     }
-} */
-
-/* >=1600px */
-/* @media (width >=1600px) {
-    section {
-        font-size: 11px;
+    .modal {
+        font-size: 15px;
     }
-} */
-
-/* >=1800px */
-/* @media (width >=1800px) {
-    section {
-        font-size: 12px;
-    }
-} */
-
-/* >=1920px */
-/* @media (width >=120em) {
     section {
         font-size: 13px;
     }
-} */
+}
 
-/* >=2160px */
-/* @media (width >=2160px) {
+/* >=1600px */
+@media (width >=1600px) {
+    #breakpoint_fix {
+        font-size: 9px;
+    }
     section {
+        font-size: 14px;
+    }
+}
+
+/* >=1800px */
+@media (width >=1800px) {
+    #breakpoint_fix {
+        font-size: 10px;
+    }
+    .modal, section {
         font-size: 15px;
     }
-} */
+}
+
+/* >=1920px */
+@media (width >=120em) {
+    #breakpoint_fix {
+        font-size: 11px;
+    }
+    .modal, section {
+        font-size: 16px;
+    }
+}
+
+/* >=2160px */
+@media (width >=2160px) {
+    #breakpoint_fix {
+        font-size: 13px;
+    }
+    .modal, section {
+        font-size: 18px;
+    }
+}
 
 /* >=2560px */
-/* @media (width >=160em) {
-    section {
-        font-size: 20px;
+@media (width >=160em) {
+    #breakpoint_fix {
+        font-size: 15px;
     }
-} */
+    .modal, section {
+        font-size: 23px;
+    }
+}
 
 /* >=3840px */
-/* @media (width >=240em) {
-    section {
-        font-size: 30px;
+@media (width >=240em) {
+    #breakpoint_fix {
+        font-size: 28px;
     }
-} */
+    .modal, section {
+        font-size: 33px;
+    }
+}
 
 
 
 
-
+/* 
 @media (width >=0px) {
     section {
         font-size: 7px;
@@ -1093,4 +1141,4 @@ body,
     section {
         font-size: 34px;
     }
-}
+} */

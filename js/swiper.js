@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     breakpoints: {
       0: {
-        slidesPerView: 1.2,
+        slidesPerView: 1.5,
         spaceBetween: 16,
       },
       768: {
-        slidesPerView: 1.5,
+        slidesPerView: 2.5,
         spaceBetween: 16,
       },
       1024: {
         slidesPerView: 2,
-        spaceBetween: 16,
+        spaceBetween: 32,
       },
     },
   });

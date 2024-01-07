@@ -13,6 +13,11 @@
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./js/swiper.js"></script>
     <script defer src="./js/accordion.js"></script>
+    <script src="./js/modal.js"></script>
+    <link rel="stylesheet" href="./css/modal.css">
+    <!-- Phone Mask lib -->
+    <script src="./js/inputmask-phones/js/mask.js"></script>
+    <script src="./js/inputmask-phones/js/mask_list.js"></script>
 </head>
 
 <body>
@@ -34,7 +39,7 @@
                     </div>
                     <div class="b-text b-text_2em">Увеличь словарный запас и начни<br> понимать Английскую речь</div>
                     <div class="hblock hblock_gap hblock_align mgtb1 hblock_mob">
-                        <div class="b-btn b-btn_v1">Начать занятия</div>
+                        <div class="b-btn b-btn_v1 button-modjs">Начать занятия</div>
                         <div class="hblock hblock_center hblock_gap">
                             <img class="b-img b-img_face" src="./images/face.png" alt="face">
                             <div class="b-text b-text_left">Тебе нужен только телефон или ноутбук<br> с выходом в
@@ -289,7 +294,7 @@
                                     навык
                                     мгновенной концентрации, улучшить память и прокачать критическое мышление<br>
                                 </div>
-                                <div class="b-btn b-btn_v1 b-btn_v1_v1">Купить доступ</div>
+                                <div class="b-btn b-btn_v1 b-btn_v1_v1 button-modjs">Купить доступ</div>
                             </div>
                         </div>
                     </div>
@@ -455,7 +460,7 @@
                 <div class="b-text b-text_2.5em b-text_700 b-text_center mgb1">Прокачай свой мозг <br>и начни читать в
                     разы<br> быстрее ровесников!</div>
                 <div class="b-text b-text_1.8em b-text_300 b-text_center mgb2">Будь на шаг впереди</div>
-                <div class="b-btn b-btn_v1 b-text_center">Хочу</div>
+                <div class="b-btn b-btn_v1 b-text_center button-modjs">Хочу</div>
             </div>
         </div>
     </section>
@@ -556,7 +561,7 @@
                                             class="b-text b-text_2em b-text_center b-text_600 b-text_black b-text_striked b-text_opacity-0.6">
                                             2 000 ₽</div>
                                         <div class="b-text b-text_3em b-text_red b-text_700 b-text_center">1 500 ₽</div>
-                                        <div class="b-btn b-btn_v1 b-btn_v1_v1">Открыть доступ</div>
+                                        <div class="b-btn b-btn_v1 b-btn_v1_v1 button-modjs">Открыть доступ</div>
                                     </div>
                                 </div>
                             </div>
@@ -652,7 +657,7 @@
                                             class="b-text b-text_2em b-text_center b-text_600 b-text_black b-text_striked b-text_opacity-0.6">
                                             2 500 ₽</div>
                                         <div class="b-text b-text_3em b-text_red b-text_700 b-text_center">2 000 ₽</div>
-                                        <div class="b-btn b-btn_v1 b-btn_v1_v1">Открыть доступ</div>
+                                        <div class="b-btn b-btn_v1 b-btn_v1_v1 button-modjs">Открыть доступ</div>
                                     </div>
                                 </div>
                             </div>
@@ -747,7 +752,7 @@
                                             class="b-text b-text_2em b-text_center b-text_600 b-text_black b-text_striked b-text_opacity-0.6">
                                             4 000 ₽</div>
                                         <div class="b-text b-text_3em b-text_red b-text_700 b-text_center">2 500 ₽</div>
-                                        <div class="b-btn b-btn_v1 b-btn_v1_v1">Открыть доступ</div>
+                                        <div class="b-btn b-btn_v1 b-btn_v1_v1 button-modjs">Открыть доступ</div>
                                     </div>
                                 </div>
                             </div>
@@ -809,7 +814,7 @@
                                             class="b-text b-text_2em b-text_center b-text_600 b-text_black b-text_striked b-text_opacity-0.6">
                                             4 000 ₽</div> -->
                                         <div class="b-text b-text_3em b-text_red b-text_700 b-text_center">1 000 ₽</div>
-                                        <div class="b-btn b-btn_v1 b-btn_v1_v1">Открыть доступ</div>
+                                        <div class="b-btn b-btn_v1 b-btn_v1_v1 button-modjs">Открыть доступ</div>
                                     </div>
                                 </div>
                             </div>
@@ -822,33 +827,108 @@
             </div>
         </div>
     </section>
-    
+
     <section class="b-section background-image_grad-blue">
         <div class="b-container b-container_auto-centering">
             <div class="b-text b-text_3em b-text_center b-text_700 pdtb2-1">Ответы на популярные вопросы</div>
             <div class="accordion">
                 <div class="accordion-item">
-                    <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Я — новичок! Мне подойдет курс?</span><span class="icon" aria-hidden="true"></span></button>
+                    <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Я — новичок! Мне
+                            подойдет курс?</span><span class="icon" aria-hidden="true"></span></button>
                     <div class="accordion-content">
                         <p>Да, занятия подходят не только новичкам, но и тем у кого уже есть знания в Английском.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">У меня точно получится?</span><span class="icon" aria-hidden="true"></span></button>
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">У меня точно
+                            получится?</span><span class="icon" aria-hidden="true"></span></button>
                     <div class="accordion-content">
                         <p>Прогресс возможен у каждого, при выполнении инструкций преподавателя и дз.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Нужно ли мне обладать какими-то дополнительными навыками?</span><span class="icon" aria-hidden="true"></span></button>
+                    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Нужно ли мне
+                            обладать какими-то дополнительными навыками?</span><span class="icon"
+                            aria-hidden="true"></span></button>
                     <div class="accordion-content">
                         <p>Все что нужно это большое желание учиться.</p>
                     </div>
                 </div>
             </div>
-            <img src="./images/logo-illuminated.png" alt="logo-illuminated" class="b-img b-img_logo b-img_logo_v1 mgt8 mgb2">
+            <img src="./images/logo-illuminated.png" alt="logo-illuminated"
+                class="b-img b-img_logo b-img_logo_v1 mgt8 mgb2">
         </div>
     </section>
+
+
+    <!-- MODAL start -->
+    <div id="modal-container">
+        <div class="modal-background">
+            <div class="b-container modal">
+                <form class="form-js">
+                    <div class="vblock vblock_100% vblock_center vblock_gap">
+                        <input autocomplete="off" type="text" name="first_name" placeholder="Ваше Имя" required>
+                        <input autocomplete="off" type="text" name="last_name" placeholder="Ваша Фамилия" required>
+                        <input autocomplete="off" class="b-input" name="user_email" placeholder="Ваша почта" type="text"
+                            required>
+                        <input id="phone" class="b-input" type="text" name="user_phone" placeholder="Ваш телефон"
+                            required>
+                        <script>mask("#phone");</script>
+                        <button type="submit" class="b-btnv1 submit-js">Отправить форму</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL end -->
+
+
+    <!-- emailjs start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('6PfILWGqONJpgXe4M');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            const modal_container = document.getElementById("modal-container");
+            const forms = document.querySelectorAll('.form-js');
+            const body = document.querySelector("body");
+            forms.forEach(function (form) {
+                var button = form.querySelector(".submit-js");
+                form.addEventListener('submit', function (event) {
+                    console.log("123..")
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number = Math.random() * 100000 | 0;
+                    console.log(this.contact_number)
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_mcem11c', 'tytoschool_o3wx8gh', this)
+                        .then(function () {
+                            button.textContent = "Успешно отправлено";
+                            form.reset()
+                            setTimeout(() => {
+                                button.textContent = "Отправить форму";
+                                modal_container.classList.add("out");
+                                body.classList.remove("modal-active");
+                            }, 3000);
+                            console.log('SUCCESS!');
+
+                        }, function (error) {
+                            button.textContent = "Возникла Ошибка";
+                            form.reset()
+                            setTimeout(() => {
+                                button.textContent = "Отправить форму";
+                            }, 3000);
+                            console.log('FAILED...', error);
+                        });
+                });
+            });
+
+        }
+    </script>
 </body>
 
 </html>
