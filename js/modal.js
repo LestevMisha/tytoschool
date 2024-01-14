@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const buttons = document.querySelectorAll(".button-modjs");
-    const body = document.querySelector('body');
+    const html = document.querySelector('html');
     const modal_container = document.getElementById("modal-container");
  
     buttons.forEach(button => {
         button.addEventListener("click", (e) => {
             modal_container.removeAttribute("class");
             modal_container.classList.add("button-modjs");
-            body.classList.add("modal-active");
+            html.classList.add("modal-active");
             var text = e.target.closest(".vblock_v6").querySelector(".price").textContent;
             var input = modal_container.querySelector("input[name='user_plan']")
             input.value = text;
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         modal_container.querySelector("form").reset();
         modal_container.classList.add("out");
-        body.classList.remove("modal-active");
+        html.classList.remove("modal-active");
     });
 
 });
